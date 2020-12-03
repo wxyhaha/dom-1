@@ -102,11 +102,11 @@ window.dom = {
         return Array.from(node.parentNode.children).filter(n=>n!==node)
     },
     next(node) {
-        let x = node.nextSibling
-        while (x && x.nodeType === 3) {
-            x=x.nextSibling
+        let nextNode = node.nextSibling
+        while (nextNode && nextNode.nodeType === 3) {
+            nextNode=nextNode.nextSibling
         }
-        return x
+        return nextNode
     },
     previous(node) {
         let x = node.previousSibling
